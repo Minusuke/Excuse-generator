@@ -14,10 +14,7 @@ function GenerarExcusa() {
     "se llevó mi",
     "tomó mi",
     "robó mi",
-    "mordió mi",
-    "puso su",
     "rompió mi",
-    "escondió mi",
     "destruyó mi",
   ];
   let Posesion = [
@@ -27,15 +24,11 @@ function GenerarExcusa() {
     "salud mental",
     "peluche de chilemorron",
     "celular",
-    "cartera",
-    "llave",
   ];
   let Donde = [
-    "en su casa",
+    "en internet",
     "en el peral",
     "en mi propia casa juan lorenzo",
-    "en internet",
-    "en la plaza",
     "en la luna",
     "en el infierno",
     "en otro universo",
