@@ -1,31 +1,70 @@
-/* eslint-disable */
-import "bootstrap";
-import "./style.css";
+function GenerarExcusa() {
+  let Pronombre = ["Un", "El"];
+  let Sujeto = [
+    "depresivo",
+    "mapache",
+    "borracho",
+    "duende",
+    "marciano",
+    "fantasma",
+    "vampiro",
+    "monstruo",
+  ];
+  let Accion = [
+    "se llevó mi",
+    "tomó mi",
+    "robó mi",
+    "mordió mi",
+    "puso su",
+    "rompió mi",
+    "escondió mi",
+    "destruyó mi",
+  ];
+  let Posesion = [
+    "tarea",
+    "blackcard",
+    "dinero",
+    "salud mental",
+    "peluche de chilemorron",
+    "celular",
+    "cartera",
+    "llave",
+  ];
+  let Donde = [
+    "en su casa",
+    "en el peral",
+    "en mi propia casa juan lorenzo",
+    "en internet",
+    "en la plaza",
+    "en la luna",
+    "en el infierno",
+    "en otro universo",
+  ];
 
+  let proIndx = Math.floor(Math.random() * Pronombre.length);
+  let sujIndx = Math.floor(Math.random() * Sujeto.length);
+  let accIndx = Math.floor(Math.random() * Accion.length);
+  let posIndx = Math.floor(Math.random() * Posesion.length);
+  let donIndx = Math.floor(Math.random() * Donde.length);
+
+  return (
+    Pronombre[proIndx] +
+    " " +
+    Sujeto[sujIndx] +
+    " " +
+    Accion[accIndx] +
+    " " +
+    Posesion[posIndx] +
+    " " +
+    Donde[donIndx]
+  );
+}
 
 window.onload = function() {
-  //write your code here
+  let quoteElement = document.querySelector("#Respuesta");
+  let buttonElement = document.querySelector("#Boton");
 
-  window.onload = () => {
-    document.querySelector("#butn").addEventListener("click", () => {
-      document.queryselector("#excuse").innerHTML = randomNumber;
-    })
-  };
-
-let generateExcuse = () =>  { 
-  let pronoun= ["un", "el", "tu", "mi"]
-  let subject = ["depresivo", "Mapache", "borracho", "duende", "marciano"]
-  let action = ["Se llevo mi", "tomo mi", "robo mi" ,"mordio mi","puso su"]
-  let possetion = [ "tarea", "blackcard", "dinero", "salud mental", "peluche de chilemorron"]
-  let where = ["En su casa", "en el peral", "En mi propia casa juan lorenzo", "en internet", "en la plaza"]
-
-  let proIndx = Math.floor(Math.random() * pronounlenght);
-  let subIndx = Math.floor(Math.random() * subjectlenght);
-  let actIndx = Math.floor(Math.random() * actionlenght);
-  let possIndx = Math.floor(Math.random() * possetionlenght);
-  let wheIndx = Math.floor(Math.random() * wherelenght);
-  
-  return pronoun[proIndx] + "" + subject[subIndx]+ "" +action[actIndx]+ "" + possetion[possIndx]+ "" +where[wheIndx];
-return " un depresivo se llevo mi salud mental en el peral";
- 
+  buttonElement.addEventListener("click", () => {
+    quoteElement.innerHTML = GenerarExcusa();
+  });
 };
